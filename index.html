@@ -4,21 +4,302 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   </head>
   <body>
+
     <div class="row">
     <div class="col-md-3" style="background-color:#ff6666;"><br><br>
 <img src="http://ashoktandan.16mb.com/mm.jpg" class="img-circle" alt="ashok" align="center"><br><br><br>
-Name: Ashok Tandan<br><br>
-Location: Gurgaon <br><br>
-Age: 23 years <br><br>
-Education: BCA <br><br>
-Contact: wchild30@gmail.com<br><br>
+<mark>Name:</mark> <kbd>Ashok Tandan</kbd><br><br>
+<mark>Location:</mark></h6> <kbd>Gurgaon</kbd> <br><br>
+<mark>Age:</mark> <kbd>23 years </kbd><br><br>
+<mark>Education:</mark><kbd> BCA</kbd> <br><br>
+<mark>Contact: </mark><kbd>wchild30@gmail.com</kbd><br><br>
+<mark>My Facebook Profile:</mark> <a href="www.facebook.com/ashoktandan"><kbd>facebook/ashoktandan</kbd></a><br><br>
+<mark>My Twitter Profile: </mark><a href="www.twitter.com/miserableashok"><kbd>twitter/miserableashok</kbd></a><br><br>
+<mark>My Blogspot Blog: </mark><a href="www.ashoktandon.blogspot.com"><kbd>ashoktandon.blogspot.com</kbd></a><br><br>
+<mark>My Wordpress Blog: </mark><a href="www.ashoktandan.wordpress.com"><kbd>ashoktandan.wordpress.com</kbd></a><br><br>
 </div>
 <div class="col-md-9" style="background-color:#eeeeee;">
- <div class="jumbotron">
-   <h3><li>My blogspot blog:www.ashoktandon.blogspot.com</li>
-   <li>My wordpress blog:www.ashoktandan.wordpress.com</li>
-   <li>My metror app:www.ashoktandan.meteor.com</li>
-   </h3>
+  <div  align="center"><code><button class="btn"><h2>Welcome to my Github Website</h2></button></code></div>
+  <h4 align="center"><kbd>C# Programs</kbd></h4>
+ <div class="jumbotron" align="center">
+   <div><mark>Prime Number:</mark><pre class="pre-scrollable">
+using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+        bool prime=true;
+        for (int i = 3; i <= 100; i++)
+        {
+            for (int j = 2; j <= 99; j++)
+            {
+                if (i != j && i % j == 0)
+                {
+                    prime = false;
+                }
+            }
+            if (prime)
+            {
+                Console.WriteLine(i);
+            }
+            prime = true;
+        }
+        Console.ReadLine();
+    }
+}
+   </pre>
+   <mark>Multidimensional Array</mark>
+   <pre class="pre-scrollable">
+    using System;
+    class Program
+    {
+        static int i, j;
+        static void Main(string[] args)
+        {                    
+           Console.WriteLine("enter no of students");
+           i = int.Parse(Console.ReadLine());
+           Console.WriteLine("enter no of subjects");
+           j = int.Parse(Console.ReadLine());
+           int[,] arr = new int[i, j];
+           for (int w = 0; w < i; w++)
+           {
+               Console.WriteLine("for " + (w+1) + " student");
+               for (int x = 0; x < j; x++)
+               {
+                   Console.Write("enter " + (x+1) + " subject marks= ");
+                   arr[w, x] = int.Parse(Console.ReadLine());                
+               }
+           }
+               for (int u = 0; u < i; u++)
+               { 
+                   Console.WriteLine("student "+(u+1)+" marks are: ");
+                   for (int y = 0; y < j; y++)
+                   {
+                       Console.WriteLine(arr[u, y]);
+                   }
+               }                       
+           Console.ReadLine();
+        }
+    }
+   </pre>
+<mark>  Delegate </mark>
+<pre class="pre-scrollable">
+using System;
+delegate void del(int n);
+class pro
+{
+    static void show(int a)
+    {
+        Console.Write(a);
+    }
+    static void Main()
+    {
+        del o = new del(show);
+        o(55);
+        Console.ReadLine();
+    }
+}
+
+</pre>
+<mark>Print Diamond</mark>
+<pre class="pre-scrollable">
+  using System;
+class prog
+{
+    public static void Main()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            for (int j = 5; j > i; j--)
+            {
+                Console.Write(" ");   
+            }
+            for (int k = 0; k < i; k++)
+            {
+                Console.Write("*");
+            }
+
+            for (int k = 1; k < i; k++)
+            {
+                Console.Write("*");
+            }
+            Console.WriteLine("");
+        }
+
+        for (int i = 5; i > 0; i--)
+        {
+            for (int j = 5; j > i; j--)
+            {
+                Console.Write(" ");
+            }
+            for (int k = 0; k < i; k++)
+            {
+                Console.Write("*");
+            }
+            for (int k = 1; k < i; k++)
+            {
+                Console.Write("*");
+            }
+            Console.WriteLine("");
+        }
+
+
+        Console.ReadLine();
+    }
+}
+</pre>
+<mark>  Fibonacci Series </mark>
+<pre class="pre-scrollable">
+
+using System;
+class Program
+    {
+    static int x=0,y=1,z = 0;
+        static void Main(string[] args)
+        {
+             Console.WriteLine(x);
+             Console.WriteLine(y);
+            for (int i = 0; i < 10; i++)
+            {
+                z = x+y;
+                    Console.WriteLine(z);
+                    x = y;
+                    y = z;
+            }
+            Console.ReadLine();
+        }
+    }
+</pre>
+<mark>  Generics </mark>
+<pre class="pre-scrollable">
+using System;
+class Pro<T>
+    { 
+    public Pro(T n)
+            {
+                Console.WriteLine(n);
+            }
+        }
+class foo
+{
+    static void Main()
+    {
+        Pro<int> obj = new Pro<int>(55);
+        Pro<string> obj1 = new Pro<string>("ashok");
+        Console.ReadLine();
+    }
+}
+
+</pre>
+<mark>  Stream Class Reader and Writer </mark>
+<pre class="pre-scrollable">
+
+using System;
+using System.IO;
+class Program
+    {
+        static void Main(string[] args)
+        {
+            string id, name, email, output, choice;
+            Console.WriteLine("enter 1.add   2.fetch");
+            choice = Console.ReadLine();
+            if (choice == "1")
+            {
+                Console.WriteLine("enter id,name,email");
+                id = Console.ReadLine();
+                name=Console.ReadLine();
+                email = Console.ReadLine();
+                StreamWriter sw = new StreamWriter(id + ".txt");
+                sw.WriteLine(id);
+                sw.WriteLine(name);
+                sw.WriteLine(email);
+                sw.Close();
+                Console.WriteLine("user added");
+            }
+            else if (choice == "2")
+            {
+                Console.WriteLine("enter id");
+                id = Console.ReadLine();
+                StreamReader sr = new StreamReader(id + ".txt");
+                Console.WriteLine("user id,name & email are");
+                while ((output = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(output);
+                }
+            }
+            else {
+                Console.WriteLine("wrong input");
+            }
+            Console.ReadLine();
+        }
+    }
+</pre>
+<mark>  Display the Number with its Reverse </mark>
+<pre class="pre-scrollable">
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+ 
+namespace Program
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num, reverse = 0;
+            Console.WriteLine("Enter a Number : ");
+            num = int.Parse(Console.ReadLine());
+            while (num != 0)
+            {
+                reverse = reverse * 10;
+                reverse = reverse + num % 10;
+                num = num / 10;
+            }
+            Console.WriteLine("Reverse of Entered Number is : "+reverse);
+            Console.ReadLine();
+ 
+        }
+    }
+}
+</pre>
+<mark>  Display Numbers in the form of Triangle </mark>
+<pre class="pre-scrollable">
+
+using System;
+class Pascal
+{
+    public static void Main()
+    {
+        int[,] arr = new int[8, 8];     
+        for (int i = 0; i < 8; i++)
+        {
+            for (int k = 7; k > i; k--)
+            {   //For loop to print spaces
+                Console.Write(" ");
+            }
+ 
+            for (int j = 0; j < i; j++)
+            {
+                if (j == 0 || i == j)
+                {
+                    arr[i, j] = 1;
+                }
+                else
+                {
+                    arr[i, j] = arr[i - 1, j] + arr[i - 1, j - 1];
+                }
+                Console.Write(arr[i, j] + " ");
+            }
+            Console.WriteLine();
+ 
+        }
+        Console.ReadLine();
+    }
+}
+</pre>
+ </div>
  </div>
 </div>
             <script type="text/javascript">
